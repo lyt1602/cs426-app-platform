@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: 'Poppins', sans-serif;
+}
+@layer base {
+	a {
+		@apply cursor-pointer;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+}
+@layer utilities {
+	/* --------------------------------- FOOTER --------------------------------- */
+	footer > div > ul > li {
+		@apply mx-6 font-bold text-lg hover:text-gray-200;
+	}
+	/* --------------------------------- SIDEBAR -------------------------------- */
+	.sidebar > div > ul > li > a {
+		@apply flex mx-4 my-8 py-4 px-4 hover:bg-gray-600 rounded-md;
+	}
+	.sidebar > div > ul > li > a > span {
+		@apply my-auto mx-4;
+	}
+	/* --------------------------------- SUBNAV --------------------------------- */
+	._subnav {
+		@apply flex w-full h-max pl-4 bg-[#fafafa] border-y-[1px] border-y-[#e5e5e5];
+	}
+	._subnav > a {
+		@apply py-1 text-[12px] text-[#333333] hover:text-[#e47911] hover:border-b-2 hover:border-b-[#e47911] border-b-2 border-b-white px-3;
+	}
+	/* ----------------------------------- NAV ---------------------------------- */
+	nav > section > a {
+		@apply my-auto;
+	}
+	nav > section > * {
+		@apply mx-4;
+	}
+	/* --------------------------------- Search Bar -------------------------------- */
+	.searchbar {
+		@apply text-[14px] border-[1px] border-[#131921] hover:border-white rounded flex;
+	}
+	.searchbar > input {
+		@apply h-8 w-full;
+	}
+	.searchbar > select {
+		@apply w-auto relative text-[14px] text-[#12181f] bg-[#f3f3f3] rounded-l h-8 p-0 py-1 pl-2 pr-6;
+	}
+	.selectbar > button {
+		@apply rounded-r bg-[#f8bd69] px-4 py-1;
+	}
+	/* ----------------------------- Book Component ----------------------------- */
+	.book {
+		@apply px-2 py-1 mx-auto text-[12px];
+	}
+	.tag {
+		@apply text-[#565959];
+	}
+	.link {
+		@apply text-[#007185];
+	}
+	.title {
+		@apply w-[177px] truncate;
+	}
+	.price {
+		@apply text-[#B12704];
+	}
+	.image {
+		@apply max-w-[177px] max-h-[266px];
+	}
+	/* -------------------------------- BOOK ROW -------------------------------- */
+	.book-row {
+		@apply mx-4 my-2 w-full;
+	}
+	.section-title {
+		@apply text-[24px] text-[#0f1111] font-bold;
+	}
+	.book-row > hr {
+		@apply h-2;
+	}
+	/* -------------------------------- Add Book -------------------------------- */
+    
+	.input {
+		@apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none;
+	}
+	.button {
+		@apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none;
+	}
+	.label {
+		@apply block text-gray-700 text-sm font-bold my-2 mx-4 w-[10rem];
+	}
+	/* ------------------------ PLEASE NAME THIS SECTION ------------------------ */
+	.link {
+		@apply cursor-pointer text-link hover:text-primary hover:underline;
+	}
+	/* --------------------------------- BOOKLEFTCOL --------------------------------- */
+	.bookLeftcol {
+		@apply ml-40 w-max;
+	}
+	.bookLeftcol > div > img {
+		@apply w-48;
+	}
+	.author_profile > img {
+		@apply w-14 h-14 rounded-full mt-2 mb-2 mr-10;
+	}
+	/* --------------------------------- BOOKDETAILWRAPPER --------------------------------- */
+	.book_detail_wrapper {
+		@apply grid grid-cols-3 gap-4;
+	}
+}
